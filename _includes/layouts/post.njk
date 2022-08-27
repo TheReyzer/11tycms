@@ -7,8 +7,17 @@ layout: layouts/base.njk
 </div>
 
 <div class="px-4 px-lg-5 mx-lg-5">
+    <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+        <ol class="breadcrumb px-2 rounded pb-1">
+            <li class="breadcrumb-item fw-bold"><small><a href="/">Home</a></small></li>
+            <li class="breadcrumb-item fw-bold"><small><a href="/posts">Posts</a></small></li>
+            <li class="breadcrumb-item fw-bold text-secondary" aria-current="page"><small>{{ title }}</small></li>
+        </ol>
+    </nav>
+
     <h2>{{ title }}</h2>
 
     <p>{{ description }}</p>
 
     <p>{{ content  | safe }}</p>
+</div>

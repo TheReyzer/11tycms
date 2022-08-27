@@ -1,3 +1,24 @@
-.post-list {
-    
+.active {
+    font-weight: bold;
 }
+
+.breadcrumb {
+    width: fit-content;
+    background-color: #f0f0f0;
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .w-lg-25 {
+        min-width: 25%;
+        max-width: 25%;
+        width: 25%;
+    }
+    .w-lg-50 {
+        min-width: 50%;
+        max-width: 50%;
+        width: 50%;
+    }
+ }
