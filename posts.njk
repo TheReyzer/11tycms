@@ -2,18 +2,10 @@
 layout: layouts/base.njk
 pagination:
   data: collections.posts
-  size: 1
+  size: 2
   reverse: true
   alias: posts
 ---
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
-
-
-  <nav class="d-flex flex-row justify-content-center" aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="{{pagination.href.previous}}">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="{{pagination.href.next}}">Next</a></li>
-  </ul>
-</nav>

@@ -34,7 +34,7 @@
             </div>
         </nav>
 
-        <h1 class="text-center">11Ty CMS.</h1>
+        <h1 class="text-center fw-bold">11Ty CMS.</h1>
 
         <main class="container-fluid mt-5 px-lg-5">
             
@@ -67,11 +67,13 @@
 </section>
 
 
-  <nav class="d-flex flex-row justify-content-center" aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="/posts/1/">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="">Next</a></li>
-  </ul>
+  <nav aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  <ol>
+    <li><a href="/posts/">Page 1</a></li>
+    <li><a href="/posts/1/">Page 2</a></li>
+    <li><a href="/posts/2/" aria-current="page">Page 3</a></li>
+  </ol>
 </nav>
         </main>
 
