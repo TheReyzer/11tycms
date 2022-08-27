@@ -2,10 +2,13 @@
 layout: layouts/base.njk
 ---
 
-<img src="{{ featuredImage | url }}" alt=""></img>
+<div class="d-flex justify-content-center">
+    <img width="250rem" class="img-fluid rounded-4 mb-5" src="{{ thumbnail | url }}" alt="{{ post.data.title }}"></img>
+</div>
 
-<h2>{{ title }}</h2>
+<div class="px-4 px-lg-5 mx-lg-5">
+    <h2>{{ title }}</h2>
 
-<p>{{ description }}</p>
+    <p>{{ description }}</p>
 
-<p>{{ content  | safe }}</p>
+    <p>{{ content  | safe }}</p>

@@ -1,16 +1,11 @@
 <ul class="list-group">
 
     {% for post in postslist %}
-        <li class="list-group-item">
-            <strong>
-                <a href="{{ post.url | url }}">
-                    {{ post.data.title }}
-                </a>
-            </strong>  
-            -
-            <span>
-                {{ post.data.description }}
-            </span>
+        <li class="list-group-item post-list py-4 d-flex flex-column">
+            <img width="100rem" class="img-fluid rounded-3 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
+            <h5 class="text-dark mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
+            <small class="text-secondary mb-3">{{ post.data.description }}</small>
+            <a type="button" class="btn btn-sm border-none shadow-none btn-primary w-25 fw-bold" href="{{ post.url | url }}">Read <small>💬</small></a>
         </li>
     {% endfor %}
 
