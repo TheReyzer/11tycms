@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: Eleventy, Bootstrap 5 e CMS.
+title: Eleventy, Bootstrap 5 and CMS.
 description: Irure anim enim culpa amet elit. Non duis eu dolor sunt.
 date: 2022-08-27T03:58:09.385Z
 thumbnail: /images/uploads/img1.jpg
