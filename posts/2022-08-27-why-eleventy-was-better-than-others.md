@@ -7,7 +7,7 @@ thumbnail: /images/uploads/img2.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet sit amet cursus sit amet dictum. Aliquet nibh praesent tristique magna sit amet. Neque sodales ut etiam sit amet nisl purus in. Aliquet lectus proin nibh nisl condimentum. Auctor urna nunc id cursus metus. Ornare massa eget egestas purus viverra accumsan in nisl. A iaculis at erat pellentesque adipiscing commodo. 
 
-`Montes nascetur ridiculus mus mauris vitae. `
+`Montes nascetur ridiculus` mus mauris vitae. 
 
 Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Interdum varius sit amet mattis vulputate enim. Non nisi est sit amet facilisis magna. Orci nulla pellentesque dignissim enim sit amet. Aliquet nec ullamcorper sit amet risus.
 

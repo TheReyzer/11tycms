@@ -3,21 +3,21 @@ layout: layouts/base.njk
 ---
 
 <div class="d-flex justify-content-center">
-    <img width="250rem" class="img-fluid rounded-4 mb-5" src="{{ thumbnail | url }}" alt="{{ post.data.title }}"></img>
+    <img width="250rem" class="img-fluid post-image rounded-4 mb-5" src="{{ thumbnail | url }}" alt="{{ post.data.title }}"></img>
 </div>
 
-<div class="px-4 px-lg-5 mx-lg-5">
-    <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
-        <ol class="breadcrumb px-2 rounded pb-1">
-            <li class="breadcrumb-item fw-bold"><small><a href="/">Home</a></small></li>
-            <li class="breadcrumb-item fw-bold"><small><a href="/posts">Posts</a></small></li>
-            <li class="breadcrumb-item fw-bold text-secondary" aria-current="page"><small>{{ title }}</small></li>
+<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+        <ol class="breadcrumb mx-auto px-2 rounded py-1 d-flex flex-row">
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/">Home</a></small></li>
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/posts">Posts</a></small></li>
+            <li class="breadcrumb-item fw-bold last-bread text-secondary" aria-current="page"><small>{{ title }}</small></li>
         </ol>
     </nav>
+<div class="px-3 px-lg-5 mx-lg-5">
 
     <h2>{{ title }}</h2>
 
-    <p>{{ description }}</p>
+    <p class="mb-4">{{ description }}</p>
 
     <p>{{ content  | safe }}</p>
 </div>
