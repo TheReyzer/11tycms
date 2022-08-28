@@ -2,10 +2,14 @@
 layout: layouts/base.njk
 pagination:
   data: collections.posts
-  size: 2
+  size: 1
   reverse: true
-  alias: posts
 ---
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
+
+<h3 class="text-center">Tags</h3>
+<div class="d-flex flex-row ">
+  {%include "tags.njk"%}
+</div>

@@ -27,15 +27,23 @@ body {
 }
 
 .post-image-preview {
+    min-height: 10rem;
+    min-width: 12rem;
     height: 10rem;
     width: 40rem;
+    max-height: 15rem;
+    max-width: 60rem;
     object-fit: cover;
     object-position: center;
 }
 
 .post-image {
+    min-height: 10rem;
+    min-width: 12rem;
     height: 15rem;
     width: 40rem;
+    max-height: 15rem;
+    max-width: 40rem;
     object-fit:cover;
     object-position: center;
 }
@@ -58,11 +66,6 @@ code {
         min-width: 25%;
         max-width: 25%;
         width: 25%;
-    }
-    .w-lg-50 {
-        min-width: 50%;
-        max-width: 50%;
-        width: 50%;
     }
 
     .last-bread {

@@ -1,12 +1,11 @@
-<section class="row px-4 px-lg-2 justify-content-center">
-
-    {% for post in postslist %}
-        <div class="col-12 col-lg-4 w-100 w-lg-25 mx-lg-4 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
-            <img width="100rem" class="img-fluid rounded-3 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
-            <h5 class="text-dark mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
-            <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
-            <a type="button" class="btn btn-sm border-0 shadow-none  mt-auto btn-primary w-25 w-lg-50 fw-bold" href="{{ post.url | url }}">Read <small>💬</small></a>
-        </div>
-    {% endfor %}
-
+<section class="row d-flex justify-content-center px-4">
+        {% for post in postslist | reverse %}
+            <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
+                <a href="{{ post.url | url }}">
+                    <img class="img-fluid rounded-3 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
+                </a>
+                <h5 class="text-dark mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
+                <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
+            </div>
+        {% endfor %}
 </section>
