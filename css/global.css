@@ -54,11 +54,12 @@ img {
 }
 
 pre {
+    margin: 0 auto;
     background-color: #222222;
     color:greenyellow;
     font-family: monospace;
     width: fit-content;
-    border-radius: 3.5px;
+    border-radius: 5px;
     padding: 0.5rem 1rem;
 }
 
