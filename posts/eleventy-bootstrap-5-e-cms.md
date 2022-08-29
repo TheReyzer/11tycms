@@ -4,7 +4,7 @@ title: Eleventy, Bootstrap 5 and CMS.
 description: Irure anim enim culpa amet elit. Non duis eu dolor sunt.
 date: 2022-08-27T03:58:09.385Z
 thumbnail: /images/uploads/img1.jpg
-tags: Tecnology
+tags: Bootstrap 5
 ---
 Excepteur amet ex occaecat enim quis laboris. Aliqua eiusmod eu tempor tempor dolor do non ipsum magna. Anim est ut dolor pariatur et id. Aute dolor consectetur est sit quis.
 
