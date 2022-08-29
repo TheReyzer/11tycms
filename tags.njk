@@ -10,9 +10,9 @@ pagination:
     - posts
 ---
 
-<h1>a“{{ tag }}”</h1>
+<h1>Tagged “{{ tag }}”</h1>
 {% set postslist = collections[ tag ] %}
-
+This never change in page.
  
 {% include "postslist.njk" %}
 
