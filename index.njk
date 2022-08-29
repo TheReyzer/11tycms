@@ -1,8 +1,17 @@
 ---
 layout: layouts/base.njk
 permalink: /
+data: collections
+filter:
+    - all
+    - posts
 ---
 
-<p class="text-center mx-auto w-lg-50">Welcome to my blog, this is a new project and the ideia is create a consistence and stable blog, with pagination system, gallery and other things, similar to HugeApk.</P>
-<p class="text-center mx-auto w-lg-50">After that change to real HugeApk with 11Ty and Netlify CMS. See the posts: <a class="link" href="/posts">Blog.</a></p>
+<p class="text-center mx-auto w-lg-50">Welcome to my blog, this is a new project and the ideia is create a consistence and stable blog, with pagination system, gallery and other things.</P>
+<p class="text-center mx-auto w-lg-50">I choose 11Ty and Netlify CMS. See the posts: <a class="link" href="/posts">Blog.</a></p>
 
+{% set postslist = collections.posts %}
+
+
+<h3 class="text-center mt-5">&#11834; Tags 	&#11834; <br>I need to hide "all" and "posts" tags.</h3>
+{% include "tagslist.njk" %}

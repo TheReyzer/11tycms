@@ -1,4 +1,6 @@
-
+.navbar-brand img {
+    width: 65px;
+}
 
 body {
     background-color: #fdfaf6;
@@ -73,13 +75,13 @@ code {
 }
 
 .tag-list {
-    background-color: #222222;
-    color: #ffd900;
+    background-color: #2c2c2c;
+    color: #0d6efd;
     transition: all 0.3s;
 }
 
 .tag-list:hover {
-    color: #ffd700;
+    color: #0d6efd;
     transform: translateY(-5px);
     transition: all 0.3s;
 }
