@@ -1,7 +1,9 @@
 <section class="d-flex flex-row flex-wrap mx-0 my-4 justify-content-center">
   
-  {%- for tag, posts in collections | dictsort %}
-    <a class="tag-list mx-2 my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+  {%- for tag, posts in collections | dictsort -%}
+    {%- if tag != "all" and tag != "posts" %}
+      <a class="tag-list mx-2 my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+    {%- endif -%}
   {%- endfor %}
 
 </section>
