@@ -4,12 +4,21 @@ pagination:
   data: collections.posts
   size: 1
   reverse: true
+  alias: posts
+  filter:
+    - all
+    - posts
 ---
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
 
-<h3 class="text-center">Tags</h3>
-<div class="d-flex flex-row ">
-  {%include "tags.njk"%}
-</div>
+<h3 class="text-center">Tags | I need to hide "all" and "posts" tags.</h3>
+
+<section class="d-flex flex-row my-4 justify-content-center">
+  
+  {%- for tag, posts in collections | dictsort %}
+    <a class="tag-list mx-2 px-2 py-0 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+  {%- endfor %}
+
+</section>

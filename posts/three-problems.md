@@ -5,7 +5,7 @@ title: Three problems...
 description: Sleep, code, repeat, this is really my last 2 weeks.
 date: 2022-08-28T20:06:33.989Z
 thumbnail: /images/uploads/img5.jpg
-tags: Tech, Nature
+tags: Dev
 ---
 Well, the last 2 weeks are going so far the most crazy since I start to learn 11ty. I was studying 11Ty for create my personal blog, but, i found some problems...
 

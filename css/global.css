@@ -56,7 +56,7 @@ img {
 pre {
     margin: 0 auto;
     background-color: #222222;
-    color:greenyellow;
+    color:#ffd700;
     font-family: monospace;
     width: fit-content;
     border-radius: 5px;
@@ -65,11 +65,23 @@ pre {
 
 code {
     background-color: #222222;
-    color:greenyellow;
+    color:#ffd700;
     font-family: monospace;
     width: fit-content;
     border-radius: 3.5px;
     padding: 0.1rem 0.5rem;
+}
+
+.tag-list {
+    background-color: #222222;
+    color: #ffd900;
+    transition: all 0.3s;
+}
+
+.tag-list:hover {
+    color: #ffd700;
+    transform: translateY(-5px);
+    transition: all 0.3s;
 }
 
 /* Large devices (desktops, 992px and up) */

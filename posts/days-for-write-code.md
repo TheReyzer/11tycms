@@ -4,7 +4,7 @@ title: Days for write code.
 description: Some days, you just want to code like crazy.
 date: 2022-08-27T20:47:04.363Z
 thumbnail: /images/uploads/img3.jpg
-tags: Nature
+tags: Dev
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor. Auctor eu augue ut lectus. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Cursus sit amet dictum sit. Mattis rhoncus urna neque viverra justo nec ultrices dui. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Magna sit amet purus gravida quis blandit turpis. Ipsum consequat nisl vel pretium lectus quam. Donec adipiscing tristique risus nec feugiat in fermentum posuere. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere.
 

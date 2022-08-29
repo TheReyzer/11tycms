@@ -5,7 +5,7 @@ title: Pagination need to be implemented!
 description: The sort reverse already come, now is time for Pagination.
 date: 2022-08-27T22:44:57.528Z
 thumbnail: /images/uploads/img4.jpg
-tags: Nature
+tags: Dev
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum. Dui sapien eget mi proin sed libero enim. Egestas sed tempus urna et pharetra. Phasellus egestas tellus rutrum tellus pellentesque. Ullamcorper morbi tincidunt ornare massa eget egestas. Eget nunc lobortis mattis aliquam faucibus. Ut diam quam nulla porttitor massa id neque aliquam vestibulum. Pharetra vel turpis nunc eget. Consectetur libero id faucibus nisl tincidunt eget nullam non. Quis ipsum suspendisse ultrices gravida dictum fusce. Interdum velit laoreet id donec ultrices tincidunt arcu. Nec ullamcorper sit amet risus nullam. Ut enim blandit volutpat maecenas volutpat. Posuere morbi leo urna molestie at elementum. Quis risus sed vulputate odio ut. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Mi sit amet mauris commodo. `Proin fermentum` leo vel orci. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl.
 
