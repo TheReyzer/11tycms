@@ -13,8 +13,8 @@ pagination:
 <h1>a“{{ tag }}”</h1>
 {% set postslist = collections[ tag ] %}
 
-<ol>
-{% for post in postslist %}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ol>
+ 
+{% include "postslist.njk" %}
+
+<h3 class="text-center mt-5">&#11834; Tags &#11834;</h3>
+{% include "tagslist.njk" %}
