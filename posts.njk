@@ -1,13 +1,14 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: collections.posts
+  data: collections
   size: 1
   reverse: true
   alias: posts
   filter:
     - all
     - posts
+permalink: /posts/{{ posts }}
 ---
 
 {% set postslist = collections.posts %}
