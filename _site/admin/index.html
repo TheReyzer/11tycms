@@ -29,10 +29,14 @@
           h('nav', {className: 'd-flex justify-content-center mt-4'},
             h('ol', {className: 'breadcrumb mx-auto px-2 rounded py-1 d-flex flex-row'},
               h('li', {className: 'breadcrumb-item fw-bold'},
-                h('small', {className: 'breadcrumb-item fw-bold text-primary'},'Home')
+                h('small', {className: 'breadcrumb-item fw-bold'},
+                  h('a', {className: 'fw-bold'},'Home')
+                )
               ),
               h('li', {className: 'breadcrumb-item fw-bold'},
-                h('small', {className: 'breadcrumb-item fw-bold text-primary'},'Posts')
+                h('small', {className: 'breadcrumb-item fw-bold'},
+                  h('a', {className: 'fw-bold'},'Posts')
+                )
               ),
               h('li', {className: 'breadcrumb-item fw-bold last-bread text-secondary'},
                 h('small', {className: 'fw-bold'},entry.getIn(['data', 'title']))
