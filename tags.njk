@@ -8,11 +8,11 @@ pagination:
   filter:
     - all
     - posts
+permalink: /tags/{{ tag }}/
 ---
 
 <h1>Tagged “{{ tag }}”</h1>
 {% set postslist = collections[ tag ] %}
-This never change in page.
  
 {% include "postslist.njk" %}
 

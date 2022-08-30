@@ -4,7 +4,7 @@ title: Why Eleventy was better than others?
 description: Simple and easy to use, 11Ty.
 date: 2022-08-27T18:42:32.423Z
 thumbnail: /images/uploads/img2.jpg
-tags: Bootstrap 5
+tags: Technology
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet sit amet cursus sit amet dictum. Aliquet nibh praesent tristique magna sit amet. Neque sodales ut etiam sit amet nisl purus in. Aliquet lectus proin nibh nisl condimentum. Auctor urna nunc id cursus metus. Ornare massa eget egestas purus viverra accumsan in nisl. A iaculis at erat pellentesque adipiscing commodo. 
 
