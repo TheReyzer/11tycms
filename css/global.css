@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+[aria-current="page"] {
+    font-weight: bold;
+    color: #222222;
+}
+
 .navbar-brand img {
     width: 65px;
 }
@@ -10,10 +15,6 @@ body {
     background-color: #fdfaf6;
     color: #222222;
     font-family: sans-serif;
-}
-
-.active {
-    font-weight: bold;
 }
 
 .breadcrumb {
@@ -46,7 +47,7 @@ body {
 .post-image {
     min-height: 10rem;
     min-width: 12rem;
-    height: 21rem;
+    height: 20rem;
     width: 40rem;
     max-height: 21rem;
     max-width: 40rem;
