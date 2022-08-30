@@ -13,5 +13,21 @@
   <script>
     CMS.registerPreviewStyle("../css/global.css");
   </script>
+  <script>
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var image = entry.getIn(['data', 'image']);
+        var bg = this.props.getAsset(image);
+        return h('div', {},
+          h('img', {src: bg.toString()}),
+          h('h1', {}, entry.getIn(['data', 'title'])),
+          h('div', {"className": "text"}, this.props.widgetFor('body'))
+        );
+      }
+    });
+  
+    CMS.registerPreviewTemplate("posts", PostPreview);
+  </script>
 </body>
 </html>
