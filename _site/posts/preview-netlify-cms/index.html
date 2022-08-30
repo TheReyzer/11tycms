@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/css/global.css">
+
+        <title>11Ty CMS</title>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand px-lg-5 mb-4">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand" href="/">
+                    <img src="../../images/11ty.svg" alt="Eleventy Logo">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+                <div class="nav" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto my-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="/posts">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-center fw-bold">11Ty CMS<small>🚧</small></h1>
+
+        <main class="container-fluid mt-4 px-lg-5">
+            
+<div class="d-flex justify-content-center">
+    <img width="250rem" class="img-fluid post-image rounded-4 mb-5" src="/images/uploads/img7.jpg" alt=""></img>
+</div>
+
+<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+        <ol class="breadcrumb mx-auto px-2 rounded py-1 d-flex flex-row">
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/">Home</a></small></li>
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/posts">Posts</a></small></li>
+            <li class="breadcrumb-item fw-bold last-bread text-secondary"><small>Preview Netlify CMS!</small></li>
+        </ol>
+</nav>
+<div class="px-3 px-lg-5 mx-lg-5 my-4">
+
+    <h1>Preview Netlify CMS!</h1>
+
+    <p class="mb-4">Now, when I&#39;m writing this, I&#39;m seeing the preview.</p>
+
+    <p><p>So good! I have heard about <em><strong>custom preview</strong></em> on Netlify yesterday and start today searching more about this. First I think it dont't will be possible, because someone say Eleventy don't support that, but, if don't support, how I'm using right now!?</p>
+<p><img src="/images/uploads/preview.png" alt="Preview CMS" title="Preview CMS"></p>
+<p>You just need to read the documentation about <a href="https://www.netlifycms.org/docs/customization/">custom preview</a> and if you need a template for study like me, check this <a href="https://ibywaks.medium.com/how-to-customize-content-preview-on-netlify-cms-with-gridsome-26e23561021">article</a> writed by Ibiyemi Adewakun that you can use on eleventy.</p>
+<p>I have changed a little things and I will explain here.</p>
+<p>This is my <code>/admin/index.html</code></p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;script src=&quot;https://identity.netlify.com/v1/netlify-identity-widget.js&quot;&gt;&lt;/script&gt;
+  &lt;title&gt;Content Manager&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;
+  &lt;script src=&quot;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    CMS.registerPreviewStyle(&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css&quot;);
+    CMS.registerPreviewStyle(&quot;../css/global.css&quot;);
+  &lt;/script&gt;
+  &lt;script&gt;
+
+    var PostPreview = createClass({
+      render: function() {
+        const { entry, getAsset, widgetsFor } = this.props
+        const imagePath = entry.getIn(['data', 'thumbnail'])
+        const image = getAsset(imagePath)
+
+        return h('div', {className: 'container-fluid mt-4 px-lg-5'},
+          h('div', {className: 'd-flex justify-content-center mt-4'},
+            h('img', {src: image.toString(), className: 'img-fluid post-image rounded-4 mb-5'})
+          ),
+
+          h('nav', {className: 'd-flex justify-content-center mt-4'},
+            h('ol', {className: 'breadcrumb mx-auto px-2 rounded py-1 d-flex flex-row'},
+              h('li', {className: 'breadcrumb-item fw-bold'},
+                h('small', {className: 'breadcrumb-item fw-bold text-primary'},'Home')
+              ),
+              h('li', {className: 'breadcrumb-item fw-bold'},
+                h('small', {className: 'breadcrumb-item fw-bold text-primary'},'Posts')
+              ),
+              h('li', {className: 'breadcrumb-item fw-bold last-bread text-secondary'},
+                h('small', {className: 'fw-bold'},entry.getIn(['data', 'title']))
+              )
+            )
+          ),
+
+          h('div', {className: 'px-3 px-lg-5 mx-lg-5 my-4'},
+            h('h1', {className: ''},entry.getIn(['data', 'title'])),
+            h('p', {className: 'mb-4'}, entry.getIn(['data', 'description'])),
+            h('div', {className: &quot;text&quot;}, this.props.widgetFor('body'))
+          )
+        );
+
+      }
+    });
+  
+    CMS.registerPreviewTemplate(&quot;posts&quot;, PostPreview);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Above you can see on top of code this line:</p>
+<pre><code class="language-html">&lt;script&gt;
+    CMS.registerPreviewStyle(&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css&quot;);
+    CMS.registerPreviewStyle(&quot;../css/global.css&quot;);
+ &lt;/script&gt;
+</code></pre>
+<p>The first <em><strong>CMS.registerPreviewStyle</strong></em> calls <em><strong>Bootstrap 5</strong></em>, you can install on your project with Yarn, but I didn't just because I don't want XD.</p>
+<p>The second <em><strong>CMS.registerPreviewStyle</strong></em> call's the <em><strong>Global.css</strong></em> file on my <code>/css/</code> folder with some customizations that I made.</p>
+<p>Down the code we have <em><strong>CMS.registerPreviewTemplate(&quot;posts&quot;, PostPreview);</strong></em> And it's set the post preview to Netlify understand what we want.</p>
+<p>This is the basically scratch to start, have fun!</p>
+</p>
+
+</div>
+
+        </main>
+
+        
+        
+        
+        
+
+        <footer class="p-3 text-center">
+            Copyright &copy; Made with ❤ by RodrigoC.
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
