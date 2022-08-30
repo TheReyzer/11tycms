@@ -3,6 +3,8 @@ layout: layouts/post.njk
 thumbnail: /images/uploads/img9.jpg
 title: Highlight!
 description: Now we have Hightlight on site.
+tags:
+  - Dev
 date: 2022-08-30T20:56:18.257Z
 ---
 Well, when we are reading some article on web, more about code, the colors of the words are real important to understand what the code make.
