@@ -23,7 +23,7 @@ body {
 }
 
 .last-bread {
-    width: 14rem;
+    max-width: 14rem;
     white-space: nowrap;  
     overflow: hidden;
     text-overflow: ellipsis; 
