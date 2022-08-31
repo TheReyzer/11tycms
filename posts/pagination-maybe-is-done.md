@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 thumbnail: /images/uploads/pagination-maybe-is-done-.jpg
 title: Pagination maybe is done!
-description: We need make some checks but it's pretty fine!
+description: I need make some checks but it's pretty fine!
 tags:
   - Dev
 date: 2022-08-31T22:52:36.044Z
