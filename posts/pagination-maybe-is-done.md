@@ -11,11 +11,9 @@ I love how the things work on 11ty. Yesterday I was maybe dawn because I cannot 
 
 I was thinking about play ***Sea Of Thieves*** but my mind don't leave me, so I stay all afternoon studying about this and figuring. 
 
-After a while, I open the github and find one interesting issue about 11ty pagination, when I open that and see this: `{% for post in pagination.items %}` than I compare to my code, and see that I'm using `{% for post in collections.posts %}` so you can see the difference.
+After a while, I open the github and find one interesting issue about 11ty pagination, when I open that and see this: `pagination.items` than I compare to my code, and see that I'm using `collections.posts` so you can see the difference.
 
 This change make evertything works beautiful and nice.
-
-
 
 Resources:
 
