@@ -17,4 +17,4 @@ if(tired == 'true'){
 }
 ```
 
-You can see the difference when the condition start and when finish. Thanks for plugins like [Highlight.js](https://highlightjs.org) that I'm using here.  Now is time to keep studying pagination, the site need thahhat.
+You can see the difference when the condition start and when finish. Thanks for plugins like [Highlight.js](https://highlightjs.org) that I'm using here.  Now is time to keep studying pagination, the site need that.
