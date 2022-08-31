@@ -98,6 +98,17 @@ code {
     transition: all 0.3s;
 }
 
+.btn-light-green {
+    background-color: #00f769;
+    color: #077938;
+}
+
+.btn-light-green:hover,
+.btn-light-green:focus {
+    background-color: #03e665;
+    color: #066931;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .w-lg-25 {
