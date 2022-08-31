@@ -12,8 +12,9 @@ pagination:
 ---
 
 {% set postslist = collections.posts %}
+
 <section class="row d-flex justify-content-center px-4">
-        {% for post in collections.posts | reverse %}
+        {% for post in postslist | reverse %}
             <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
@@ -27,11 +28,11 @@ pagination:
 <nav>
   <ul class="pagination justify-content-center">
     <li class="mx-3">
-        <a class="rounded-2 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.previous %} href="{{ pagination.href.previous }}" {% endif %} aria-label="Previous">
+        <a class="rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.previous %} href="{{ pagination.href.previous }}" {% endif %} aria-label="Previous">
           Prev
         </a>
     </li class=" mx-3">
-        <a class="rounded-2 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.next %} href="{{ pagination.href.next }}" {% endif %} aria-label="Next">
+        <a class="rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.next %} href="{{ pagination.href.next }}" {% endif %} aria-label="Next">
           Next
         </a>
     </li>
