@@ -2,19 +2,18 @@
 layout: layouts/base.njk
 pagination:
   data: collections.posts
-  size: 2
+  size: 3
   reverse: true
   alias: posts
   filter:
     - all
     - posts
-# permalink: /posts/{{ posts }}
 ---
 
 {% set postslist = collections.posts %}
 
 <section class="row d-flex justify-content-center px-4">
-        {% for post in collections.posts | reverse %}
+        {% for post in pagination.items %}
             <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
@@ -25,18 +24,30 @@ pagination:
         {% endfor %}
 </section>
 
+
+
+{% if pagination.pageLinks.length > 1 %}
 <nav>
   <ul class="pagination justify-content-center">
-    <li class="mx-3">
-        <a class="rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.previous %} href="{{ pagination.href.previous }}" {% endif %} aria-label="Previous">
-          Prev
-        </a>
-    </li class=" mx-3">
-        <a class="rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" {% if pagination.href.next %} href="{{ pagination.href.next }}" {% endif %} aria-label="Next">
-          Next
-        </a>
+    <li class=" mx-3">
+  {% if pagination.previousPageLink %}
+      <a class="border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="{{ pagination.previousPageHref | url }}" aria-label="Previous">Prev</a>
+  {% else %}
+      <a class="user-non border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="" aria-label="Previous">Prev</a>
+  {% endif %}
+    </li>
+
+    
+    <li class=" mx-3">
+  {% if pagination.nextPageLink %}
+      <a class="border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="{{ pagination.nextPageHref | url }}" aria-label="Previous">Next</a>
+  {% else %}
+      <a class="user-non border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="" aria-label="Previous">Next</a>
+  {% endif %}
     </li>
   </ul>
 </nav>
+{% endif %}
+
 
 {% include "tagslist.njk" %}
