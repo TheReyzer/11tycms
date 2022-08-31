@@ -15,8 +15,6 @@ After a while, I open the github and find one interesting issue about 11ty pagin
 
 This change make evertything works beautiful and nice.
 
-
-
 Resources:
 
 * [11ty Pagination](https://www.11ty.dev/docs/pagination/)
