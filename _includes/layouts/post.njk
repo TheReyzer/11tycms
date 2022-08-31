@@ -38,11 +38,11 @@ layout: layouts/base.njk
 
 
     {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {% set nextPost = collections.posts| getNextCollectionItem(page) %}
 
-</div>
+</div>{{ pageUrl}}
 
 <div class="d-flex flex-row align-items-center justify-content-center px-2">
-  {% if previousPost %}<a type="button" class="col-6 col-lg-2 btn badge-article-prev px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href="{{ previousPost.url }}"><small>{{ previousPost.data.title }}</small></a>{% endif %}
-  {% if nextPost %}<a type="button" class="col-6 col-lg-2 btn badge-article-next px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href="{{ nextPost.url }}"><small>{{ nextPost.data.title }}</small></a>{% endif %}
+  {% if previousPost | reverse %}<a type="button" class="{% if previousPost == post.url %} user-non {% endif %} col-6 col-lg-2 btn badge-article-prev px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href="{{ previousPost.url }}"><small>{{ previousPost.data.title }}</small></a>{% endif %}
+  {% if nextPost | reverse %}<a type="button" class="{% if nextPost == post.url %} user-non {% endif %} col-6 col-lg-2 btn badge-article-next px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href="{{ nextPost.url }}"><small>{{ nextPost.data.title }}</small></a>{% endif %}
 </div>
