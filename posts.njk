@@ -26,12 +26,12 @@ pagination:
 
 <nav>
   <ul class="pagination justify-content-center">
-    <li class="mx-2">
-        <a class="rounded-2 btn-light-green px-3 py-1 page-link" {% if pagination.href.previous %} href="{{ pagination.href.previous }}" {% endif %} aria-label="Previous">
+    <li class="mx-3">
+        <a class="rounded-2 btn-light-green shadow-none px-3 py-1 page-link" {% if pagination.href.previous %} href="{{ pagination.href.previous }}" {% endif %} aria-label="Previous">
           Prev
         </a>
-    </li class=" mx-2">
-        <a class="rounded-2 btn-light-green px-3 py-1 page-link" {% if pagination.href.next %} href="{{ pagination.href.next }}" {% endif %} aria-label="Next">
+    </li class=" mx-3">
+        <a class="rounded-2 btn-light-green shadow-none px-3 py-1 page-link" {% if pagination.href.next %} href="{{ pagination.href.next }}" {% endif %} aria-label="Next">
           Next
         </a>
     </li>
