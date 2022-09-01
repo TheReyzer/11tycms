@@ -8,7 +8,7 @@ pagination:
   filter:
     - all
     - posts
-permalink: /posts/{{ pagination.pageNumber + 1 }}/
+permalink: "posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 {% set postslist = collections.posts %}
