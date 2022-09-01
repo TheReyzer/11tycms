@@ -27,7 +27,7 @@ body {
 .breadcrumb {
     width: fit-content;
     background-color: #f3f0eb;
-    box-shadow: 0 1px 5px #2c2c2c27;
+    box-shadow: 0 1px 5px #2c2c2c23;
 }
 
 .last-bread {
@@ -105,18 +105,18 @@ code {
     color: #077938;
 }
 
-.btn-light-green:hover,
-.btn-light-green:focus {
+.btn-light-green:hover {
     background-color: #03e665;
     color: #066931;
 }
 
+.btn-light-green:focus {
+    background-color: #00d15b;
+    color: #066931;
+}
+
 .badge-article-next,
-.badge-article-prev,
-.badge-article-next:hover,
-.badge-article-prev:hover,
-.badge-article-next:focus,
-.badge-article-prev:focus {
+.badge-article-prev {
     white-space: nowrap;  
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -129,8 +129,21 @@ code {
     height: 29px;
 }
 
+.badge-article-next:hover,
+.badge-article-prev:hover {
+    background-color: #20b35f;
+    color: #fdfaf6;
+    text-shadow: 0 1px 3px rgba(2, 56, 26, 0.801);
+}
+
+.badge-article-next:focus,
+.badge-article-prev:focus {
+    background-color: #18a354;
+    color: #fdfaf6;
+    text-shadow: 0 1px 3px rgba(2, 56, 26, 0.801);
+}
+
  .badge-article-next {
-    background-color: #29c06a;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='200' height='100' patternUnits='userSpaceOnUse' patternTransform='rotate(270) scale(0.29)'%3E%3Cpath id='a' data-color='fill' fill='%2303E665' stroke='%2303E665' stroke-width='8.75' d='M50 100L0 50V0l50 50 50-50h0v50l-50 50z'%3E%3C/path%3E%3Cuse xlink:href='%23a' x='100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='100' y='50'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='-100'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='200'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='50'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
     background-size: contain;
     background-position: center;
@@ -138,7 +151,6 @@ code {
 }
 
 .badge-article-prev {
-    background-color: #29c06a;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='200' height='100' patternUnits='userSpaceOnUse' patternTransform='rotate(90) scale(0.29)'%3E%3Cpath id='a' data-color='fill' fill='%2303E665' stroke='%2303E665' stroke-width='8.75' d='M50 100L0 50V0l50 50 50-50h0v50l-50 50z'%3E%3C/path%3E%3Cuse xlink:href='%23a' x='100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='100' y='50'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='-100'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='200'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='50'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
     background-size: contain;
     background-position: center;
