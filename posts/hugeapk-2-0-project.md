@@ -9,7 +9,7 @@ date: 2022-09-01T23:03:48.928Z
 ---
 This "blog" was created not just to registry progress like a diary, but, to learn 11ty, especially to create a new version of ***HugeApk***, my other site. 
 
-It's hard to maintain more than 200 apps' information alone, so I was wondering if have the best way to do it, and I found 11ty!
+It's hard to maintain more than **200 apps' information** alone, so I was wondering if have the best way to do it, and I found 11ty!
 
 The static site generator is the perfect way to manage all this information, easy and fast. I read about Next.js, Gatsby, Huge, and others; but when I found 11ty all changed, it's easy and friendly to learn.
 
