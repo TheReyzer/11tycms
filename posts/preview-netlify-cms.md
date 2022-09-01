@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-thumbnail: /images/uploads/img7.jpg
+thumbnail: /images/uploads/preview-netlify-cms.jpg
 title: Preview Netlify CMS!
 description: Now, when I'm writing this, I'm seeing the preview.
 tags:
