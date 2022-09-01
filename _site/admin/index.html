@@ -46,7 +46,7 @@
           ),
 
           h('div', {className: 'px-3 px-lg-5 mx-auto my-4 w-100 w-lg-75'},
-            h('h1', {className: ''},entry.getIn(['data', 'title'])),
+            h('h1', {className: 'fw-bold'},entry.getIn(['data', 'title'])),
             h('p', {className: 'mb-4'}, entry.getIn(['data', 'description'])),
             h('div', {className: "text"}, this.props.widgetFor('body'))
           )
