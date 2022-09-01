@@ -49,7 +49,7 @@ body {
     max-height: 15rem;
     max-width: 60rem;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
 }
 
 .post-image {
