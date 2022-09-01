@@ -60,7 +60,7 @@ body {
     max-height: 21rem;
     max-width: 40rem;
     object-fit:cover;
-    object-position: center;
+    object-position: center center;
 }
 
 img {
