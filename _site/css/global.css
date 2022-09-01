@@ -18,15 +18,15 @@ a:hover {
     width: 65px;
 }
 
-body {
-    background-color: #fdfaf6;
+ body {
+    background-color:#fffaf5;
     color: #222222;
     font-family: sans-serif;
 }
 
 .breadcrumb {
     width: fit-content;
-    background-color: #f3f0eb;
+    background-color: #282936;
     box-shadow: 0 1px 5px #2c2c2c23;
 }
 
@@ -103,16 +103,19 @@ code {
 .btn-light-green {
     background-color: #00f769;
     color: #077938;
+    transition: all 0.3s;
 }
 
 .btn-light-green:hover {
     background-color: #03e665;
     color: #066931;
+    transition: all 0.3s;
 }
 
 .btn-light-green:focus {
     background-color: #00d15b;
     color: #066931;
+    transition: all 0.3s;
 }
 
 .badge-article-next,
@@ -127,12 +130,14 @@ code {
     background-position: center center;
     text-shadow: 0 1px 3px rgba(2, 56, 26, 0.801);
     height: 29px;
+    transition: all 0.3s;
 }
 
 .badge-article-next:hover,
 .badge-article-prev:hover {
     background-color: #20b35f;
     color: #fdfaf6;
+    transition: all 0.3s;
     text-shadow: 0 1px 3px rgba(2, 56, 26, 0.801);
 }
 
@@ -140,6 +145,7 @@ code {
 .badge-article-prev:focus {
     background-color: #18a354;
     color: #fdfaf6;
+    transition: all 0.3s;
     text-shadow: 0 1px 3px rgba(2, 56, 26, 0.801);
 }
 

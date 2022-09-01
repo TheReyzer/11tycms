@@ -15,7 +15,7 @@ permalink: "posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1
 
 <section class="row d-flex justify-content-center px-4">
         {% for post in pagination.items %}
-            <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
+            <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 pb-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
                 </a>
