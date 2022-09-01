@@ -13,7 +13,17 @@ I was thinking about play ***Sea Of Thieves*** but my mind don't leave me, so I 
 
 After a while, I open the github and find one interesting issue about 11ty pagination, when I open that and see this: `pagination.items` than I compare to my code, and see that I'm using `collections.posts` so you can see the difference.
 
-This change make evertything works beautiful and nice.
+Instead get the info on top of the page:
+
+```
+---
+pagination:
+  size: 3
+  data: collections
+---
+```
+
+I was getting the collections, after change evertything works beautiful and nice.
 
 Resources:
 
