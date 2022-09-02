@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 thumbnail: /images/uploads/hugeapk-2.0-project.jpg
-title: HugeApk 2.0 Project.
+title: HugeApk 2.0 Project
 description: Now it's time to look the future.
 tags:
   - Dev
