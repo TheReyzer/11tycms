@@ -7,7 +7,7 @@ tags:
   - Dev
 date: 2022-08-30T20:56:18.257Z
 ---
- hen we are reading some article on web, more about code, the colors of the words are real important to understand what the code make.
+ When we are reading some articles on the web, more about code, the colors of the words are really important to understand what the code does.
 
 Ex:
 
@@ -17,4 +17,4 @@ if(tired == 'true'){
 }
 ```
 
-You can see the difference when the condition start and when finish. Thanks for plugins like [Highlight.js](https://highlightjs.org) that I'm using here.  Now is time to keep studying pagination, the site need that.
+You can see the difference between when the condition starts and when finishes. Thanks for plugins like [Highlight.js](https://highlightjs.org) that I'm using here.  Now is the time to keep studying pagination, the site needs that.
