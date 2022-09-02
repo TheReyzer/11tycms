@@ -8,13 +8,13 @@ tags:
   - Bootstrap 5
 date: 2022-08-30T18:00:20.851Z
 ---
-So good! I have heard about ***custom preview*** on Netlify yesterday and start today searching more about this. First I think it dont't will be possible, because someone say Eleventy don't support that, but, if don't support, how I'm using right now!?
+So good! I heard about ***custom preview*** on Netlify yesterday and start today searching more about this. First I think it doesn't will be possible because someone says Eleventy doesn't support that, but, if don't support it, how I'm using it right now!?
 
 ![Preview CMS](/images/uploads/preview.png "Preview CMS")
 
-You just need to read the documentation about [custom preview](https://www.netlifycms.org/docs/customization/) and if you need a template for study like me, check this [article](https://ibywaks.medium.com/how-to-customize-content-preview-on-netlify-cms-with-gridsome-26e23561021) writed by Ibiyemi Adewakun that you can use on eleventy.
+You just need to read the documentation about [custom preview](https://www.netlifycms.org/docs/customization/) and if you need a template for a study like me, check this [article](https://ibywaks.medium.com/how-to-customize-content-preview-on-netlify-cms-with-gridsome-26e23561021) written by Ibiyemi Adewakun that you can use on eleventy.
 
-I have changed a little things and I will explain here.
+I have changed a few things and I will explain them here.
 
 This is my `/admin/index.html`
 
@@ -77,7 +77,7 @@ This is my `/admin/index.html`
 </html>
 ```
 
-Above you can see on top of code this line:
+Above you can see on top of the code this line:
 
 ```html
 <script>
@@ -86,10 +86,10 @@ Above you can see on top of code this line:
  </script>
 ```
 
-The first ***CMS.registerPreviewStyle*** calls ***Bootstrap 5***, you can install on your project with Yarn, but I didn't just because I don't want XD.
+The first ***CMS.registerPreviewStyle*** calls ***Bootstrap 5***, which you can install on your project with Yarn, but I didn't just because I don't want XD.
 
-The second ***CMS.registerPreviewStyle*** call's the ***Global.css*** file on my `/css/` folder with some customizations that I made.
+The second ***CMS.registerPreviewStyle*** call's the ***Global.css*** file on my `/CSS/` folder with some customizations that I made.
 
-Down the code we have ***CMS.registerPreviewTemplate("posts", PostPreview);*** And it's set the post preview to Netlify understand what we want.
+Down the code we have ***CMS.registerPreviewTemplate("posts", PostPreview);*** And it's set the post preview to Netlify to understand what we want.
 
-This is the basically scratch to start, have fun!
+This is scratch to start, have fun!
