@@ -7,10 +7,12 @@ tags:
   - Dev
 date: 2022-09-04T04:18:28.321Z
 ---
+Yesterday I fix some problems on HugeApk 2.0 and some updates.
 
+The system gallery is done with differences between **Landscape** and **Portrait** images to be responsive on mobile and desktop.
 
+Description was done too and now I'm working on pagination on index page.
 
+The new layout of the download page, now called Store is awesome, really responsive and smoth.
 
-```
-b
-```
+I have a lot to do so, see you!
