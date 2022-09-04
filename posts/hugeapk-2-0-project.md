@@ -11,7 +11,7 @@ This "blog" was created not just to registry progress like a diary, but, to lear
 
 It's hard to maintain more than **200 apps' information** alone, so I was wondering if have the best way to do it, and I found 11ty!
 
-The static site generator is the perfect way to manage all this information, easy and fast. I read about Next.js, Gatsby, Huge, and others; but when I found 11ty all changed, it's easy and friendly to learn.
+The static site generator is the perfect way to manage all this information, easy and fast. I read about Next.js, Gatsby, Hugo, and others; but when I found 11ty all changed, it's easy and friendly to learn.
 
 Well, now I will start HugeApk 2.0 which is the new version of my site, now with a static site generator will be easier to do everything!
 
