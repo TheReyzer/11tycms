@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 thumbnail: /images/uploads/problems-gone.jpg
 title: Problems gone.
-description: Maybe no all...
+description: Maybe not all...
 tags:
   - Dev
 date: 2022-09-05T21:25:50.181Z
