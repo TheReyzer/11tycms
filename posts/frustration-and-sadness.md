@@ -28,6 +28,6 @@ size: 1
 
 But, when I have used some implementations, what happens is that **all the collections** that exist are stored and used in this pagination, and I couldn't do it with just **1 collection**. When arriving at **page 3** as in the example above, the pagination button is still active, and then we have another problem, it will take me to another tag like `/tags/11ty/`behavior that in pagination is unwanted.
 
-So I think at least for now, I'll say goodbye to 11ty but keep following the evolution of the project, I hope they make some more practical solutions to this problem.
+So I think at least for now, I'll take a while with 11ty but keep following the evolution of the project, I hope they make some more practical solutions to this problem.
 
-> goodbye 11ty.
+> this is not a goodbye 11ty.
