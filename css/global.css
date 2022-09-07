@@ -88,6 +88,15 @@ code {
     padding: 0.1rem 0.5rem;
 }
 
+blockquote {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #f4f4f7;
+    border-left: 3px solid #d7d7df;
+    width: fit-content;
+}
+
 .tag-list {
     background-color: #282936;
     color: #00f769;
