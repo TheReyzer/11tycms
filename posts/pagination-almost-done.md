@@ -28,5 +28,5 @@ I was getting the collections after change everything works beautiful and nice.
 Resources:
 
 * [11ty Pagination](https://www.11ty.dev/docs/pagination/)
-* [11ty Pagination ](https://www.11ty.dev/docs/pagination/nav/)Navigation
+* [11ty Pagination](https://www.11ty.dev/docs/pagination/nav/)
 * [GitHub Issue](https://github.com/11ty/eleventy/issues/455)
