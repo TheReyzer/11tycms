@@ -71,10 +71,11 @@ img {
 
 pre {
     position: relative;
+    width: 100%;
+    min-width: 100%;
     max-width: 100%;
     margin: 1rem 0;
-    font-family: monospace;
-    width: fit-content;
+    font-family: monospace; 
     border-radius: 5px;
     overflow: auto;
 }
@@ -83,7 +84,9 @@ code {
     background-color: #282936;
     color:#00f769;
     font-family: monospace;
-    width: fit-content;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     border-radius: 3.5px;
     padding: 0.1rem 0.5rem;
 }
