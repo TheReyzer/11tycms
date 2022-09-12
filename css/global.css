@@ -100,6 +100,10 @@ blockquote {
     width: fit-content;
 }
 
+.fancy-font {
+    color: #00e764;
+}
+
 .tag-list {
     background-color: #282936;
     color: #00f769;
