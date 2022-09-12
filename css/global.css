@@ -67,6 +67,7 @@ img {
     width: 21rem;
     margin: 1rem auto;
     border-radius: 5px;
+    border: 1px solid lightgray;
 }
 
 pre {
@@ -75,6 +76,9 @@ pre {
     min-width: 100%;
     max-width: 100%;
     margin: 1rem 0;
+    padding: 1rem;
+    background-color: #282936;
+    color: #fffced;
     font-family: monospace; 
     border-radius: 5px;
     overflow: auto;

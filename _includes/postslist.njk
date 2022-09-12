@@ -2,7 +2,7 @@
         {% for post in postslist | reverse %}
             <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 py-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
-                    <img class="img-fluid rounded-3 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
+                    <img class="img-fluid rounded-3 w-100 border-0 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
                 </a>
                 <h5 class="text-dark mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
                 <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
