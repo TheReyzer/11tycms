@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
 
+:root {
+    --color-text: #222222;
+    --color-text-50: #6c757d;
+    --color-text-nav: #0000008c;
+    --color-text-nav-hover: #000000b3;
+    --color-background: #fffaf5;
+}
+
+[data-theme='dark'] {
+  --color-text: #fffaf5;
+  --color-text-50: #6c757d;
+  --color-text-nav: #ffffff8c;
+  --color-text-nav-hover: #ffffffb3;
+  --color-background: #222222;
+}
+/* --- */
+
+
+/* reset */
 * {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
@@ -18,49 +37,9 @@ a:hover {
     width: 65px;
 }
 
- body {
-    background-color:#fffaf5;
-    color: #222222;
-    font-family: sans-serif;
-}
-
-.breadcrumb {
-    width: fit-content;
-    background-color: #282936;
-    box-shadow: 0 1px 5px #2c2c2c23;
-}
-
-.last-bread {
-    max-width: 14rem;
-    white-space: nowrap;  
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-.breadcrumb-item {
-    font-size:calc(11.5px + 0.390625vw);
-}
-
-.post-image-preview {
-    min-height: 10rem;
-    min-width: 12rem;
-    height: 10rem;
-    width: 40rem;
-    max-height: 15rem;
-    max-width: 60rem;
-    object-fit: cover;
-    object-position: center center;
-}
-
-.post-image {
-    min-height: 10rem;
-    min-width: 12rem;
-    height: 20rem;
-    width: 40rem;
-    max-height: 21rem;
-    max-width: 40rem;
-    object-fit:cover;
-    object-position: center center;
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 img {
@@ -100,8 +79,22 @@ blockquote {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     background-color: #f4f4f7;
+    color: var(--color-text);
     border-left: 3px solid #d7d7df;
     width: fit-content;
+}
+/* --- */
+
+
+.post-image-preview {
+    min-height: 10rem;
+    min-width: 12rem;
+    height: 10rem;
+    width: 40rem;
+    max-height: 15rem;
+    max-width: 60rem;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .fancy-font {
@@ -187,6 +180,59 @@ blockquote {
     opacity: 0.2;
     pointer-events: none;
 }
+
+.toggle-dark-light {
+    cursor: pointer;
+}
+
+.nav-link {
+    color: var(--color-text-nav);
+}
+
+
+.nav-link:hover {
+    color: var(--color-text-nav-hover)
+}
+
+
+/* Posts inside */
+.title {
+    color: var(--color-text);
+}
+
+.sub-title {
+    color: var(--color-text-50);
+}
+
+.post-image {
+    min-height: 10rem;
+    min-width: 12rem;
+    height: 20rem;
+    width: 40rem;
+    max-height: 21rem;
+    max-width: 40rem;
+    object-fit:cover;
+    object-position: center center;
+}
+
+.breadcrumb {
+    width: fit-content;
+    background-color: #282936;
+    box-shadow: 0 1px 5px #2c2c2c23;
+}
+
+.last-bread {
+    max-width: 14rem;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.breadcrumb-item {
+    font-size:calc(11.5px + 0.390625vw);
+}
+
+
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 

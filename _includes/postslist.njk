@@ -4,7 +4,7 @@
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 w-100 border-0 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
                 </a>
-                <h5 class="text-dark mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
+                <h5 class="title mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
                 <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
             </div>
         {% endfor %}

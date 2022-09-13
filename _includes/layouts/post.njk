@@ -8,7 +8,7 @@ layout: layouts/base.njk
 </div>
 
 <div class="text-center">
-    <small class="fw-bold text-secondary">Posted: {{ date.toLocaleDateString("en-US") }}</small>
+    <small class="fw-bold sub-title">Posted: {{ date.toLocaleDateString("en-US") }}</small>
     <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
         <ol class="breadcrumb mx-auto px-2 rounded py-1 mt-2 d-flex flex-row">
             <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/">Home</a></small></li>
@@ -20,7 +20,7 @@ layout: layouts/base.njk
 
 <div class="content px-3 px-lg-5 mx-auto my-4 w-100 w-lg-75">
 
-    <h1 class="fw-bold">{{ title }}</h1>
+    <h1 class="fw-bold title-post">{{ title }}</h1>
 
     <p class="mb-4">{{ description }}</p>
 
