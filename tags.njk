@@ -8,10 +8,7 @@ pagination:
     filter:
         - posts
         - all
-permalink: /tag/{{ tag | slugify }}/
-eleventyComputed:
-    title: Tagged {{ tag }}
-    description: Lists post that are tagged with {{ tag }}
+permalink: /tags/{{ tag | slugify }}/
 eleventyExcludeFromCollections: true
 ---
 <ul>
