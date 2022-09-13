@@ -14,7 +14,7 @@
   --color-text-50: #6c757d;
   --color-text-nav: #ffffff8c;
   --color-text-nav-hover: #ffffffb3;
-  --color-background: #222222;
+  --color-background: #111116;
   --color-background-25: #191919;
 }
 /* --- */
@@ -84,6 +84,10 @@ blockquote {
     color: var(--color-text);
     border-left: 3px solid var(--color-text-50);
     width: fit-content;
+}
+
+em, strong {
+    color: #00e764;
 }
 /* --- */
 

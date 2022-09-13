@@ -1,0 +1,291 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/css/global.css">
+
+        <title>11Ty CMS</title>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand px-lg-5 py-0">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand" href="/">
+                    <img src="../../images/logo_dark.svg" class="border-0 logo" alt="Eleventy Logo">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="nav" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto align-items-center mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="/posts">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="/admin">Admin</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <img class="img-fluid w-100 border-0 toggle-dark-light" src="../../images/moon.svg" alt="light-mode"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <main class="container-fluid mt-4 px-lg-5">
+            
+
+<div class="d-flex justify-content-center">
+    <img width="250rem" class="img-fluid post-image border-0 rounded-4" src="/images/uploads/welcome-night-mode.jpg" alt=""></img>
+</div>
+
+<div class="text-center">
+    <small class="fw-bold sub-title">Posted: 9/13/2022</small>
+    <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
+        <ol class="breadcrumb mx-auto px-2 rounded py-1 mt-2 d-flex flex-row">
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/">Home</a></small></li>
+            <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/posts">Posts</a></small></li>
+            <li class="breadcrumb-item fw-bold last-bread text-secondary"><small>Welcome Night Mode!</small></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="content px-3 px-lg-5 mx-auto my-4 w-100 w-lg-75">
+
+    <h1 class="fw-bold title-post">Welcome Night Mode!</h1>
+
+    <p class="mb-4">No more pain to my eyes.</p>
+
+    <p><p>Yesterday I was reading some articles, about custom collections in <strong>11Ty</strong>, when I realize that my site doesn't have a Night Mode because every time I was looking at my site I want to cry.</p>
+<p>So, I start to look for some implementations but for real, I just found three, and not work as well, I mean, when I click on the button and choose the dark mode, works, but when I choose the light mode (like default) it changes to dark mode again, I realize that implementations are not for this purpose.</p>
+<p>After this, I start to create my implementation, and I will explain it here.</p>
+<p>Let's start with <code>CSS</code> with my global file <code>global.css</code>.</p>
+<pre><code class="language-CSS">:root {
+    --color-text: #222222;
+    --color-text-50: #6c757d;
+    --color-text-nav: #0000008c;
+    --color-text-nav-hover: #000000b3;
+    --color-background: #fffaf5;
+    --color-background-25: #f0ece5;
+}
+
+[data-theme='dark'] {
+  --color-text: #fffaf5;
+  --color-text-50: #6c757d;
+  --color-text-nav: #ffffff8c;
+  --color-text-nav-hover: #ffffffb3;
+  --color-background: #222222;
+  --color-background-25: #191919;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+</code></pre>
+<p>We have a light mode by default :root and a dark mode <code>data-theme='dark'</code>, which changes the colors and we just need to say what color we want to show on light and dark mode and pass this value using the <code>var(--variable)</code>.</p>
+<p>In my navigation component called <code>Navbar.njk</code> I have the toggle button.</p>
+<pre><code class="language-html">&lt;img class=&quot;toggle-dark-light&quot; src=&quot;../../images/moon.svg&quot; alt=&quot;&quot; width=&quot;25&quot; height=&quot;25&quot;/&gt;
+</code></pre>
+<p>Now we have the logic! In the base file, in my case <code>Layout.njk</code> before the <code>&lt;body&gt;</code> tags we will put this script.</p>
+<pre><code>&lt;script&gt;
+  var themeColor = 'light';
+  var logo = document.querySelector('.logo');
+  var btnToggle = document.querySelector('.toggle-dark-light');
+  var themeStorage = window.localStorage.getItem('theme');
+            
+
+  {# user click to change colors #}
+    btnToggle.addEventListener('click',function(){
+      if (themeColor === 'light') {
+        // Set value of  darkmode to dark
+        themeColor = 'dark';
+        btnToggle.src = '../../images/sun.svg'
+        logo.src  = '../../images/logo_light.svg'
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+      } else {
+        // Set value of  darkmode to light
+        themeColor = 'light';
+        btnToggle.src = '../../images/moon.svg'
+        logo.src  = '../../images/logo_dark.svg'
+        document.documentElement.removeAttribute('data-theme');
+        window.localStorage.setItem('theme', 'light');
+      }
+    });
+
+
+{# if have localstorage set theme #}
+  if(themeStorage){
+    themeColor = themeStorage;
+      if (themeColor === 'light') {
+        // Set value of  darkmode to light
+        themeColor = 'light';
+        logo.src  = '../../images/logo_dark.svg'
+        btnToggle.src = '../../images/moon.svg'
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        // Set value of  darkmode to dark
+        themeColor = 'dark';
+        logo.src  = '../../images/logo_light.svg'
+        btnToggle.src = '../../images/sun.svg'
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } 
+    }
+    {# if don't have localstorage, set light #}
+    else {
+      // Set value of  darkmode to light
+      themeColor = 'light';
+      btnToggle.src = '../../images/moon.svg'
+      document.documentElement.removeAttribute('data-theme');
+      window.localStorage.setItem('theme', 'light');
+    }
+            
+&lt;/script&gt;
+</code></pre>
+<p>Let's put it in parts. We have 4 variables:</p>
+<ul>
+<li><em><strong>themeColor</strong></em> - Save the state of color</li>
+<li><em><strong>logo</strong></em> - for change the src between light/dark mode</li>
+<li><em><strong>btnToggle</strong></em> - to switch theme</li>
+<li><em><strong>themeStorage</strong></em> - save the user preference in LocalStorage</li>
+</ul>
+<p>After declaring all these variables, we need to create an interaction from the user to the button:</p>
+<pre><code class="language-javascript">{# user click to change colors #}
+    btnToggle.addEventListener('click',function(){
+      if (themeColor === 'light') {
+        // Set value of  darkmode to dark
+        themeColor = 'dark';
+        btnToggle.src = '../../images/sun.svg'
+        logo.src  = '../../images/logo_light.svg'
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
+      } else {
+        // Set value of  darkmode to light
+        themeColor = 'light';
+        btnToggle.src = '../../images/moon.svg'
+        logo.src  = '../../images/logo_dark.svg'
+        document.documentElement.removeAttribute('data-theme');
+        window.localStorage.setItem('theme', 'light');
+      }
+    });
+</code></pre>
+<p>When the user clicks on <code>btnToggle</code>, it checks if <code>themeColor</code> has a <code>light</code> value or doesn't if have we changed to the dark value, change the <strong>src</strong> from the <em><strong>logo</strong></em>, change the <strong>src</strong> from the <em><strong>button</strong></em>, and set in the document the attribute <code>data-theme 'dark'</code> and save in <em><strong>localStorage</strong></em>. Same for light mode.</p>
+<p>Now we check when the user loads the page if has any value saved on <em><strong>localStorage</strong></em>:</p>
+<pre><code class="language-javascript">{# if have localstorage set theme #}
+  if(themeStorage){
+    themeColor = themeStorage;
+      if (themeColor === 'light') {
+        // Set value of  darkmode to light
+        themeColor = 'light';
+        logo.src  = '../../images/logo_dark.svg'
+        btnToggle.src = '../../images/moon.svg'
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        // Set value of  darkmode to dark
+        themeColor = 'dark';
+        logo.src  = '../../images/logo_light.svg'
+        btnToggle.src = '../../images/sun.svg'
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } 
+    }
+    {# if don't have localstorage, set light #}
+    else {
+      // Set value of  darkmode to light
+      themeColor = 'light';
+      btnToggle.src = '../../images/moon.svg'
+      document.documentElement.removeAttribute('data-theme');
+      window.localStorage.setItem('theme', 'light');
+    }
+</code></pre>
+<p>It has, it sets the saved value and changes the <strong>src</strong> from <strong>variables</strong>, if don't have any value saved, it saves a light value and set all src from variables.</p>
+<p>It's all, I hope it helps people to do a Night Mode system without a <em><strong>flicker</strong></em> of light/dark mode! See you.</p>
+</p>
+
+
+    
+    
+
+</div>
+
+<div class="d-flex flex-row align-items-center justify-content-center px-2 mt-5 mb-2">
+  <a type="button" class=" col-6 col-lg-2 btn badge-article-prev px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href="/posts/something-is-going-to-happen/"><small>Something is going to happen.</small></a>
+  <a type="button" class=" user-non  col-6 col-lg-2 btn badge-article-next px-2 mx-2 mx-lg-4 py-1 rounded-1 border-0 shadow-none fw-bold" href=""><small></small></a>
+</div>
+
+        </main>
+
+        
+        
+        
+        
+
+        <footer class="p-3 text-center">
+            Copyright &copy; Made with ❤ by <a target="_blank" href="https://rodrigocjesus.netlify.app">RodrigoC</a>.
+        </footer>
+        <script>
+            var themeColor = 'light';
+            var logo = document.querySelector('.logo');
+            var btnToggle = document.querySelector('.toggle-dark-light');
+            var themeStorage = window.localStorage.getItem('theme');
+            
+
+            
+            btnToggle.addEventListener('click',function(){
+                if (themeColor === 'light') {
+                    // Set value of  darkmode to dark
+                    themeColor = 'dark';
+                    btnToggle.src = '../../images/sun.svg'
+                    logo.src  = '../../images/logo_light.svg'
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    window.localStorage.setItem('theme', 'dark');
+                } else {
+                    // Set value of  darkmode to light
+                    themeColor = 'light';
+                    btnToggle.src = '../../images/moon.svg'
+                    logo.src  = '../../images/logo_dark.svg'
+                    document.documentElement.removeAttribute('data-theme');
+                    window.localStorage.setItem('theme', 'light');
+                }
+            });
+
+
+            
+            if(themeStorage){
+                themeColor = themeStorage;
+                 if (themeColor === 'light') {
+                    // Set value of  darkmode to light
+                    themeColor = 'light';
+                    logo.src  = '../../images/logo_dark.svg'
+                    btnToggle.src = '../../images/moon.svg'
+                    document.documentElement.removeAttribute('data-theme');
+                } else {
+                    // Set value of  darkmode to dark
+                    themeColor = 'dark';
+                    logo.src  = '../../images/logo_light.svg'
+                    btnToggle.src = '../../images/sun.svg'
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } 
+
+            }
+            
+            else {
+                    // Set value of  darkmode to light
+                    themeColor = 'light';
+                    btnToggle.src = '../../images/moon.svg'
+                    document.documentElement.removeAttribute('data-theme');
+                    window.localStorage.setItem('theme', 'light');
+            }
+            
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
