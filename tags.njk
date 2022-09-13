@@ -1,22 +1,19 @@
 ---
 layout: layouts/base.njk
 pagination:
-    data: collections
-    size: 1
-    alias: tag
-    addAllPagesToCollections: true
-    filter:
-        - posts
-        - all
-permalink: /tags/{{ tag | slugify }}/
-eleventyExcludeFromCollections: true
+  data: collections
+  size: 1
+  reverse: true
+  alias: tag
+  filter:
+    - all
+    - posts
+permalink: /tags/{{ tag }}/
 ---
-<ul>
-{% for post in collections[tag] %}
-    <li>
-        <a href="{{ post.url }}">
-            <h2>{{ post.data.title }}</h2>
-        </a>
-    </li>
-{% endfor %}
-</ul>
+
+<h1>Tagged “{{ tag }}”</h1>
+{% set postslist = collections[ tag ] %}
+ 
+{% include "postslist.njk" %}
+
+{% include "tagslist.njk" %}

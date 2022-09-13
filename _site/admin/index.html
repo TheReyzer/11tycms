@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle("https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css");
+    CMS.registerPreviewStyle("../css/global.css");
+  </script>
+  <script>
+
+    var PostPreview = createClass({
+      render: function() {
+        const { entry, getAsset, widgetsFor } = this.props
+        const imagePath = entry.getIn(['data', 'thumbnail'])
+        const image = getAsset(imagePath)
+
+        return h('div', {className: 'container-fluid mt-4 px-lg-5'},
+          h('div', {className: 'd-flex justify-content-center mt-4'},
+            h('img', {src: image.toString(), className: 'img-fluid post-image rounded-4 mb-5'})
+          ),
+
+          h('nav', {className: 'd-flex justify-content-center mt-4'},
+            h('ol', {className: 'breadcrumb mx-auto px-2 rounded py-1 d-flex flex-row'},
+              h('li', {className: 'breadcrumb-item fw-bold'},
+                h('small', {className: 'breadcrumb-item fw-bold'},
+                  h('a', {className: 'fw-bold'},'Home')
+                )
+              ),
+              h('li', {className: 'breadcrumb-item fw-bold'},
+                h('small', {className: 'breadcrumb-item fw-bold'},
+                  h('a', {className: 'fw-bold'},'Posts')
+                )
+              ),
+              h('li', {className: 'breadcrumb-item fw-bold last-bread text-secondary'},
+                h('small', {className: 'fw-bold'},entry.getIn(['data', 'title']))
+              )
+            )
+          ),
+
+          h('div', {className: 'px-3 px-lg-5 mx-auto my-4 w-100 w-lg-75'},
+            h('h1', {className: 'fw-bold'},entry.getIn(['data', 'title'])),
+            h('p', {className: 'mb-4'}, entry.getIn(['data', 'description'])),
+            h('div', {className: "text"}, this.props.widgetFor('body'))
+          )
+        );
+
+      }
+    });
+  
+    CMS.registerPreviewTemplate("posts", PostPreview);
+  </script>
+</body>
+</html>

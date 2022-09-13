@@ -4,7 +4,7 @@ thumbnail: /images/uploads/frustration-and-sadness.jpg
 title: Frustration and Sadness.
 description: I don't want leave you 11ty... :(
 tags:
-  - dev
+  - Dev
 date: 2022-09-06T22:32:17.989Z
 ---
 I was trying to create this new project ***HugeApk 2.0*** but it won't, at least not with 11ty. And I didn't want to do it any other way than with 11ty, it's simple, easy to use, and very optimized.

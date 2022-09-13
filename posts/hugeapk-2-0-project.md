@@ -4,10 +4,10 @@ thumbnail: /images/uploads/hugeapk-2.0-project.jpg
 title: HugeApk 2.0 Project
 description: Now it's time to look the future.
 tags:
-  - dev
+  - Dev
 date: 2022-09-01T23:03:48.928Z
 ---
-This "blog" was created not just to registry progress like a diary, but, to learn 11ty, especially to create a new version of ***HugeApk***, my other site.
+This "blog" was created not just to registry progress like a diary, but, to learn 11ty, especially to create a new version of ***HugeApk***, my other site. 
 
 It's hard to maintain more than **200 apps' information** alone, so I was wondering if have the best way to do it, and I found 11ty!
 

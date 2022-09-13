@@ -7,6 +7,7 @@ pagination:
   alias: posts
   filter:
     - all
+    - posts
 permalink: "posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
@@ -18,7 +19,7 @@ permalink: "posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 border-0 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
                 </a>
-                <h5 class="title-post mt-1 mb-0 fw-bold">{{ post.data.title }}</h5>
+                <h5 class="title-post mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
                 <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
             </div>
         {% endfor %}
@@ -37,7 +38,7 @@ permalink: "posts/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1
   {% endif %}
     </li>
 
-
+    
     <li class=" mx-3">
   {% if pagination.nextPageLink %}
       <a class="border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="{{ pagination.nextPageHref | url }}" aria-label="Previous">Next</a>
