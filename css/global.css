@@ -6,6 +6,7 @@
     --color-text-nav: #0000008c;
     --color-text-nav-hover: #000000b3;
     --color-background: #fffaf5;
+    --color-background-25: #f0ece5;
 }
 
 [data-theme='dark'] {
@@ -14,6 +15,7 @@
   --color-text-nav: #ffffff8c;
   --color-text-nav-hover: #ffffffb3;
   --color-background: #222222;
+  --color-background-25: #191919;
 }
 /* --- */
 
@@ -46,7 +48,7 @@ img {
     width: 21rem;
     margin: 1rem auto;
     border-radius: 5px;
-    border: 1px solid lightgray;
+    border: 2px solid var(--color-text-50);
 }
 
 pre {
@@ -78,9 +80,9 @@ blockquote {
     margin-left: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    background-color: #f4f4f7;
+    background-color: var(--color-background-25);
     color: var(--color-text);
-    border-left: 3px solid #d7d7df;
+    border-left: 3px solid var(--color-text-50);
     width: fit-content;
 }
 /* --- */
@@ -202,6 +204,10 @@ blockquote {
 
 .sub-title {
     color: var(--color-text-50);
+}
+
+.text-post {
+    color: var(--color-text);
 }
 
 .post-image {
