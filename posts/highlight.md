@@ -4,7 +4,7 @@ thumbnail: /images/uploads/highlight.jpg
 title: Highlight!
 description: Now we have Hightlight on site.
 tags:
-  - Dev
+  - dev
 date: 2022-08-30T20:56:18.257Z
 ---
  When we are reading some articles on the web, more about code, the colors of the words are really important to understand what the code does.
