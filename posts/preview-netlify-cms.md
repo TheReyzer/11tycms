@@ -4,8 +4,8 @@ thumbnail: /images/uploads/preview-netlify-cms.jpg
 title: Preview Netlify CMS!
 description: Now, when I'm writing this, I'm seeing the preview.
 tags:
-  - Dev
-  - Bootstrap 5
+  - dev
+  - bootstrap 5
 date: 2022-08-30T18:00:20.851Z
 ---
 So good! I heard about ***custom preview*** on Netlify yesterday and start today searching more about this. First I think it doesn't will be possible because someone says Eleventy doesn't support that, but, if don't support it, how I'm using it right now!?
@@ -70,7 +70,7 @@ This is my `/admin/index.html`
 
       }
     });
-  
+
     CMS.registerPreviewTemplate("posts", PostPreview);
   </script>
 </body>

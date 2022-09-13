@@ -4,10 +4,10 @@ thumbnail: /images/uploads/another-day-another-challenge.jpg
 title: Another day, another challenge!
 description: The tag system become real.
 tags:
-  - Dev
+  - dev
 date: 2022-08-29T22:26:35.806Z
 ---
-Well, thanks to the 11Ty community on [Discord](https://discord.com/invite/GBkBy9u), especially "Aankhen" for the help, and patience. 
+Well, thanks to the 11Ty community on [Discord](https://discord.com/invite/GBkBy9u), especially "Aankhen" for the help, and patience.
 
 The tag system was done, but not 100%, I mean the "problem" now is the `/tags/.../` page, it shows a static page and I said static not because I'm using 11Ty here, It's because when I change a word, for example, the page doesn't change.
 

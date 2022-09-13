@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -9,13 +10,13 @@
         <title>11Ty CMS</title>
     </head>
     <body>
-        
+
         <nav class="navbar navbar-expand px-lg-5 py-0">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="/">
                     <img src="../../images/logo_dark.svg" class="border-0 logo" alt="Eleventy Logo">
                 </a>
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,7 +49,7 @@
 </div>
 
 <div class="text-center">
-    <small class="fw-bold sub-title">Posted: 9/4/2022</small>
+    <small class="fw-bold sub-title">Posted: 9/3/2022</small>
     <nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
         <ol class="breadcrumb mx-auto px-2 rounded py-1 mt-2 d-flex flex-row">
             <li class="breadcrumb-item fw-bold"><small><a class="text-decoration-none" href="/">Home</a></small></li>
@@ -84,10 +85,10 @@
 
         </main>
 
-        
-        
-        
-        
+
+
+
+
 
         <footer class="p-3 text-center">
             Copyright &copy; Made with ❤ by <a target="_blank" href="https://rodrigocjesus.netlify.app">RodrigoC</a>.
@@ -97,7 +98,7 @@
             var logo = document.querySelector('.logo');
             var btnToggle = document.querySelector('.toggle-dark-light');
             var themeStorage = window.localStorage.getItem('theme');
-            
+
 
             
             btnToggle.addEventListener('click',function(){
@@ -134,7 +135,7 @@
                     logo.src  = '../../images/logo_light.svg'
                     btnToggle.src = '../../images/sun.svg'
                     document.documentElement.setAttribute('data-theme', 'dark');
-                } 
+                }
 
             }
             
@@ -145,7 +146,7 @@
                     document.documentElement.removeAttribute('data-theme');
                     window.localStorage.setItem('theme', 'light');
             }
-            
+
             </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>

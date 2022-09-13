@@ -3,7 +3,8 @@ layout: layouts/post.njk
 thumbnail: /images/uploads/three-problems.jpg
 title: Three problems...
 description: Sleep, code, repeat, this is really my last 2 weeks.
-tags: Dev
+tags:
+  - dev
 date: 2022-08-28T20:06:33.989Z
 ---
 Well, the last 2 weeks are going so far the craziest since I start to learn at 11ty. I was studying 11Ty to create my blog, but, I found some problems...
