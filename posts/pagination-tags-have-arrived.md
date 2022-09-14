@@ -154,9 +154,7 @@ page 2:
 
 But actually, if I use this on `Tags.njk`
 
-```javascript
-{% for post in tag.pageData | reverse %}
-```
+`{% for post in tag.pageData | reverse %}`
 
 I get the posts in this order:
 
@@ -173,7 +171,7 @@ page 2:
 
 It only reverses the posts rendered on the page and not the array.
 
-- - -
+
 
 **The second problem is the prev/next links in the Tags.njk**
 I'm using this:
