@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand px-lg-5 py-0">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="/">
-                    <img src="../../images/logo_dark.svg" class="border-0 logo" alt="Eleventy Logo">
+                    <img src="/images/logo_dark.svg" class="border-0 logo" alt="Eleventy Logo">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
                             <a class="nav-link fw-bold" href="/admin">Admin</a>
                         </li>
                         <li class="nav-item px-2">
-                            <img class="img-fluid w-100 border-0 toggle-dark-light" src="../../images/moon.svg" alt="light-mode"/>
+                            <img class="img-fluid w-100 border-0 toggle-dark-light" src="/images/moon.svg" alt="light-mode"/>
                         </li>
                     </ul>
                 </div>
@@ -171,15 +171,15 @@
                 if (themeColor === 'light') {
                     // Set value of  darkmode to dark
                     themeColor = 'dark';
-                    btnToggle.src = '../../images/sun.svg'
-                    logo.src  = '../../images/logo_light.svg'
+                    btnToggle.src = '/images/sun.svg'
+                    logo.src  = '/images/logo_light.svg'
                     document.documentElement.setAttribute('data-theme', 'dark');
                     window.localStorage.setItem('theme', 'dark');
                 } else {
                     // Set value of  darkmode to light
                     themeColor = 'light';
-                    btnToggle.src = '../../images/moon.svg'
-                    logo.src  = '../../images/logo_dark.svg'
+                    btnToggle.src = '/images/moon.svg'
+                    logo.src  = '/images/logo_dark.svg'
                     document.documentElement.removeAttribute('data-theme');
                     window.localStorage.setItem('theme', 'light');
                 }
@@ -192,14 +192,14 @@
                  if (themeColor === 'light') {
                     // Set value of  darkmode to light
                     themeColor = 'light';
-                    logo.src  = '../../images/logo_dark.svg'
-                    btnToggle.src = '../../images/moon.svg'
+                    logo.src  = '/images/logo_dark.svg'
+                    btnToggle.src = '/images/moon.svg'
                     document.documentElement.removeAttribute('data-theme');
                 } else {
                     // Set value of  darkmode to dark
                     themeColor = 'dark';
-                    logo.src  = '../../images/logo_light.svg'
-                    btnToggle.src = '../../images/sun.svg'
+                    logo.src  = '/images/logo_light.svg'
+                    btnToggle.src = '/images/sun.svg'
                     document.documentElement.setAttribute('data-theme', 'dark');
                 } 
 
@@ -208,7 +208,7 @@
             else {
                     // Set value of  darkmode to light
                     themeColor = 'light';
-                    btnToggle.src = '../../images/moon.svg'
+                    btnToggle.src = '/images/moon.svg'
                     document.documentElement.removeAttribute('data-theme');
                     window.localStorage.setItem('theme', 'light');
             }
