@@ -26,6 +26,16 @@ layout: layouts/base.njk
 
     <p>{{ content  | safe }}</p>
 
+    <hr class="mt-4">
+
+    <div class="d-flex flex-row mt-3 gap-3">
+        {%- for tag in tags -%}
+            {%- if tag != "all" and tag != "posts" and tag != "doublePagination"%}
+                <a class="tag-list  my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+            {% endif %}
+        {%- endfor %}
+    </div>
+
 
     {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
     {% set nextPost = collections.posts| getNextCollectionItem(page) %}

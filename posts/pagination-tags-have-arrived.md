@@ -4,7 +4,7 @@ id: 15
 thumbnail: /images/uploads/pagination-tags-have-arrived.jpg
 title: Pagination Tags have arrived!
 description: I finally did it! Thanks to 11ty community on Discord and Zach.
-categories:
+tags:
   - Dev
 date: 2022-09-14T21:29:18.458Z
 ---
