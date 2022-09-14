@@ -100,7 +100,7 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
         {% for post in tag.pageData %}
             <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 pb-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
-                    <img class="img-fluid rounded-3 border-0 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
+                    <img class="img-fluid rounded-3 border-0 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}">
                 </a>
                 <h5 class="title-post mt-1 mb-0 fw-bold">{{ post.data.title }}</h5> 
                 <small class="text-secondary mb-3 small">{{ post.data.description }}</small>
