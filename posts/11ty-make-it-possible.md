@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 6
 thumbnail: /images/uploads/11ty-make-it-possible..jpg
 title: 11ty make it possible.
 description: Discord comunity too...

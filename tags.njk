@@ -22,7 +22,6 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
 </section>
 
 {% if pagination.pageLinks.length > 1 %}
-
 <nav>
   <ul class="pagination justify-content-center">
     <li class=" mx-3">
@@ -44,6 +43,7 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
   </ul>
 </nav>
 {% endif %}
+
 
 
 {% include "tagslist.njk" %}

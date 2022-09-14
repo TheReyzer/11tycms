@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 12
 thumbnail: /images/uploads/frustration-and-sadness.jpg
 title: Frustration and Sadness.
 description: I don't want leave you 11ty... :(

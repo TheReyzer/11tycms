@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 9
 thumbnail: /images/uploads/home-download-gallery-and-more.jpeg
 title: Home, Download, Gallery and more!
 description: The progress keep going so fast

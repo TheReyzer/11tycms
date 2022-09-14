@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 4
 thumbnail: /images/uploads/highlight.jpg
 title: Highlight!
 description: Now we have Hightlight on site.

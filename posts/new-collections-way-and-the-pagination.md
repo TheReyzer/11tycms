@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 10
 thumbnail: /images/uploads/new-collections-way-and-the-pagination.jpg
 title: New collections way, and the Pagination.
 description: Continuos progress...

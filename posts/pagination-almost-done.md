@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 5
 thumbnail: /images/uploads/pagination-maybe-is-done-.jpg
 title: Pagination almost done!
 description: I need make some checks but it's pretty fine!

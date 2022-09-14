@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 2
 thumbnail: /images/uploads/another-day-another-challenge.jpg
 title: Another day, another challenge!
 description: The tag system become real.

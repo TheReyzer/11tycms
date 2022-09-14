@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 3
 thumbnail: /images/uploads/preview-netlify-cms.jpg
 title: Preview Netlify CMS!
 description: Now, when I'm writing this, I'm seeing the preview.

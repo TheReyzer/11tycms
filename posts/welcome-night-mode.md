@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 14
 thumbnail: /images/uploads/welcome-night-mode.jpg
 title: Welcome Night Mode!
 description: No more pain to my eyes.

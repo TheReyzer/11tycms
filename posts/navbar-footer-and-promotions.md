@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 8
 thumbnail: /images/uploads/hugeapk-2.0-starts-like-a-rocket.jpg
 title: Navbar, Footer and Promotions!
 description: HugeApk 2.0 starts like a rocket!

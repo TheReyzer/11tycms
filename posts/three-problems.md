@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 1
 thumbnail: /images/uploads/three-problems.jpg
 title: Three problems...
 description: Sleep, code, repeat, this is really my last 2 weeks.

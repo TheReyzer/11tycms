@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+id: 11
 thumbnail: /images/uploads/problems-gone.jpg
 title: Problems gone.
 description: Maybe not all...
