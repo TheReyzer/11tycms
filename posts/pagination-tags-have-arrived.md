@@ -85,16 +85,5 @@ And these is my `Tags.njk`:
 ```html
 tags.njk
 
----
-layout: layouts/base.njk
-pagination:
-  data: collections.doublePagination
-  size: 1
-  alias: tag
-permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}
----
-
-<h3>Tagged: "{{ tag.tagName }}"</h3>
-
 
 ```
