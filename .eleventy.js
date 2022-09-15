@@ -34,6 +34,7 @@ module.exports = function (eleventyConfig) {
             tagMap.push({
                tagName: tagName,
                pageNumber: pageNumber,
+               pageSize: pagedItems.length,
                pageData: pagedItems[pageNumber]
             });
          }

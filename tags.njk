@@ -22,11 +22,11 @@ permalink: /tags/{{ tag.tagName | slugify }}/{% if tag.pageNumber %}{{ tag.pageN
 </section>
 
 {% set pageNumberNext = tag.pageNumber + 2 %}
-{% set formatNext = '/tags/'+tag.tagName+'/'+ pageNumberNext+'/' %}
+{% set formatNext = '/tags/'+tag.tagName | slugify+'/'+ pageNumberNext+'/' %}
 
 {% set pageNumberPrevious = tag.pageNumber %}
-{% set formatPrevious = '/tags/'+tag.tagName+'/'+ pageNumberPrevious+'/' %}
-{% set formatPreviousHome = '/tags/'+tag.tagName+'/' %}
+{% set formatPrevious = '/tags/'+tag.tagName | slugify+'/'+ pageNumberPrevious+'/' %}
+{% set formatPreviousHome = '/tags/'+tag.tagName | slugify+'/' %}
 
 {% if pagination.pageLinks.length > 1 %}
 <nav>
@@ -39,7 +39,7 @@ permalink: /tags/{{ tag.tagName | slugify }}/{% if tag.pageNumber %}{{ tag.pageN
   {% endif %}
     </li>
 
-{# Page: {{ pagination.pageNumber + 1 }} of {{ pagination.links | length  }} #}
+    <p class="my-auto fancy-font fw-bold">{{ tag.pageNumber + 1 }} | {{ tag.pageSize  }}</p>
     
     <li class=" mx-3">
   {% if pagination.nextPageLink and pagination.nextPageHref == formatNext %}
