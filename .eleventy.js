@@ -8,18 +8,9 @@ module.exports = function (eleventyConfig) {
    // note that this uses the lodash.chunk method, so you’ll have to require that
    eleventyConfig.addCollection("doublePagination", function(collection) {
       // Get unique list of tags
-      let tagSet = new Set();
-       collection.getAllSorted().map(function(item) {
-         if( "tags" in item.data ) {
-            let tags = item.data.tags;
-
-            // optionally filter things out before you iterate over?
-            for (let tag of tags) {
-               tagSet.add(tag);
-            }
-
-         }
-      });
+      //let tagSet = new Set();
+      
+      var tagSet = new Set(collection.getAllSorted().flatMap((post) => post.data.tags || []));
 
       // Get each item that matches the tag
       let paginationSize = 3;
@@ -59,7 +50,6 @@ module.exports = function (eleventyConfig) {
          }]
       */
       //console.log(tagMap);
-      return tagMap
-      ;
+      return tagMap;
    });
 }
