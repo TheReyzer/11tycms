@@ -4,7 +4,7 @@ id: 14
 thumbnail: /images/uploads/welcome-night-mode.jpg
 title: Welcome Night Mode!
 description: No more pain to my eyes.
-categories:
+tags:
   - Dev
 date: 2022-09-13T15:38:19.249Z
 ---
