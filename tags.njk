@@ -10,7 +10,7 @@ permalink: /tags/{{ tag.tagName | slugify }}/{% if tag.pageNumber %}{{ tag.pageN
 <h3>Tagged: "{{ tag.tagName }}"</h3>
 
 <section class="row d-flex justify-content-center px-4">
-        {% for post in tag.pageData | reverse %}
+        {% for post in tag.pageData %}
             <div class="w-100 col-12 col-md-6 col-lg-4 w-lg-25 mx-lg-3 pb-4 mb-3 border-0 rounded-2 d-flex flex-column">
                 <a href="{{ post.url | url }}">
                     <img class="img-fluid rounded-3 border-0 w-100 post-image-preview" src="{{ post.data.thumbnail | url }}" alt="{{ post.data.title }}"></img>
