@@ -93,11 +93,12 @@ blockquote {
 
 em, strong {
     color: #00e764;
-    text-shadow: 0 1px 3px rgba(20,20,20,0.2);
+    text-shadow: 0 0.5px 2px rgba(20,20,20,0.2);
 }
 
-p a {
-    text-shadow: 0 1px 3px rgba(20,20,20,0.2);
+p a,
+ul li a {
+    text-shadow: 0 0.5px 2px rgba(20,20,20,0.2);
 }
 /* --- */
 
