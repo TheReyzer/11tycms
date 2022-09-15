@@ -3,7 +3,7 @@
   
   {%- for tag, posts in collections | dictsort -%}
     {%- if tag != "all" and tag != "posts" and tag != "doublePagination"%}
-      <a class="tag-list mx-2 my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+      <a class="tag-list mx-2 my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
     {%- endif -%}
   {%- endfor %}
 
