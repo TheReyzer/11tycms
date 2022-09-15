@@ -31,7 +31,7 @@ layout: layouts/base.njk
     <div class="d-flex flex-row mt-3 gap-3">
         {%- for tag in tags -%}
             {%- if tag != "all" and tag != "posts" and tag != "doublePagination"%}
-                <a class="tag-list  my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag }}/">{{ tag }}</a>
+                <a class="tag-list  my-1 px-3 py-1 rounded-5 text-decoration-none fw-bold" href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
             {% endif %}
         {%- endfor %}
     </div>
