@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
    eleventyConfig.addCollection("doublePagination", function(collection) {
       // Get unique list of tags
       let tagSet = new Set();
-      collection.getAllSorted().map(function(item) {
+       collection.getAllSorted().map(function(item) {
          if( "tags" in item.data ) {
             let tags = item.data.tags;
 
@@ -28,8 +28,9 @@ module.exports = function (eleventyConfig) {
       for( let tagName of tagArray) {
          let tagItems = collection.getFilteredByTag(tagName);
          let pagedItems = lodashChunk(tagItems, paginationSize);
-         // console.log( tagName, tagItems.length, pagedItems.length );
+          //console.log( tagName, tagItems.length, pagedItems.length );
          for( let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
+            
             tagMap.push({
                tagName: tagName,
                pageNumber: pageNumber,
@@ -37,7 +38,6 @@ module.exports = function (eleventyConfig) {
             });
          }
       }
-
       /* return data looks like:
          [{
             tagName: "tag1",
@@ -57,7 +57,8 @@ module.exports = function (eleventyConfig) {
             pageData: [] // array of items
          }]
       */
-      //console.log( tagMap );
-      return tagMap;
+      //console.log(tagMap);
+      return tagMap
+      ;
    });
 }

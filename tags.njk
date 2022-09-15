@@ -21,20 +21,28 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
         {% endfor %}
 </section>
 
+{% set pageNumberNext = tag.pageNumber + 2 %}
+{% set formatNext = '/tags/'+tag.tagName+'/'+ pageNumberNext+'/' %}
+
+{% set pageNumberPrevious = tag.pageNumber %}
+{% set formatPrevious = '/tags/'+tag.tagName+'/'+ pageNumberPrevious+'/' %}
+{% set formatPreviousHome = '/tags/'+tag.tagName+'/' %}
+
 {% if pagination.pageLinks.length > 1 %}
 <nav>
   <ul class="pagination justify-content-center">
     <li class=" mx-3">
-  {% if pagination.previousPageLink %}
+  {% if pagination.previousPageLink and pagination.previousPageHref == formatPreviousHome or pagination.previousPageHref == formatPrevious %}
       <a class="border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="{{ pagination.previousPageHref | url }}" aria-label="Previous">Prev</a>
   {% else %}
       <a class="user-non border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="" aria-label="Previous">Prev</a>
   {% endif %}
     </li>
 
+{# Page: {{ pagination.pageNumber + 1 }} of {{ pagination.links | length  }} #}
     
     <li class=" mx-3">
-  {% if pagination.nextPageLink %}
+  {% if pagination.nextPageLink and pagination.nextPageHref == formatNext %}
       <a class="border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="{{ pagination.nextPageHref | url }}" aria-label="Previous">Next</a>
   {% else %}
       <a class="user-non border-0 rounded-1 btn-light-green fw-bold shadow-none px-3 py-1 page-link" href="" aria-label="Previous">Next</a>
@@ -43,7 +51,6 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
   </ul>
 </nav>
 {% endif %}
-
 
 
 {% include "tagslist.njk" %}
