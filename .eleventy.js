@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
       let tagArray = [...tagSet];
       for( let tagName of tagArray) {
          let tagItems = collection.getFilteredByTag(tagName);
-         let pagedItems = lodashChunk(tagItems, paginationSize);
+         let pagedItems = lodashChunk(tagItems.reverse(), paginationSize);
           //console.log( tagName, tagItems.length, pagedItems.length );
          for( let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
             
