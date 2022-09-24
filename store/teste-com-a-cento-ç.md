@@ -1,7 +1,7 @@
 ---
 layout: layouts/store.njk
 id: 45
-title: Teste com a^cento ç.
+title: Test with (^~´,.!@) Accent (i need to remove then)
 android: 4.1 ou superior
 tags:
   - Esportes
